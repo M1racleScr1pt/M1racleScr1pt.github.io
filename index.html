@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>M1racleScr1pt — Personal Website</title>
+
+  <!-- Basic Content Security Policy (meta-based). Note: server headers are stronger; this is a helpful fallback. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; connect-src 'self' https:;">
+
+  <!-- Fonts: preconnect + Google Fonts. Remove if you host fonts locally. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO / Social (update when you have content) -->
+  <meta name="description" content="Personal site of M1racleScr1pt — developer, creator, innovator.">
+  <meta name="author" content="M1racleScr1pt">
+
+  <!-- Encourage privacy-respecting preferences -->
+  <meta name="color-scheme" content="dark light">
+</head>
+<body>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header role="banner" class="site-header" aria-label="Primary">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="logo" href="/" aria-current="page">M1racleScr1pt</a>
+
+        <button id="navToggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <ul id="primary-nav" class="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          <li role="none"><a role="menuitem" href="https://github.com/M1racleScr1pt" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">Hi — I'm <span class="accent">M1racleScr1pt</span></h1>
+          <p class="hero-sub">Developer • Creator • Innovator</p>
+          <p class="hero-lead">I build secure, elegant solutions and write about my experiments. This site is a work in progress — stay tuned.</p>
+          <p>
+            <a class="cta-button" href="#projects">See Projects</a>
+            <a class="ghost-button" href="#contact">Get in touch</a>
+          </p>
+        </div>
+
+        <figure class="hero-media" aria-hidden="false">
+          <!-- Replace with your profile image and update alt text -->
+          <img src="placeholder-profile.svg" alt="Profile illustration" width="320" height="320" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About</h2>
+        <p>Short introduction about you. Replace this with your bio and links to talks, media, or CV.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading">Projects</h2>
+        <p>Highlights of recent work. Cards below are placeholders you can replace with real content.</p>
+
+        <div class="project-grid" role="list">
+          <article class="project-card" role="listitem" aria-label="Project 1">
+            <h3>Project One</h3>
+            <p>Short description of project — tech used, outcome, link.</p>
+            <p><a href="#" rel="noopener noreferrer">Read more</a></p>
+          </article>
+
+          <article class="project-card" role="listitem" aria-label="Project 2">
+            <h3>Project Two</h3>
+            <p>Short description of project — tech used, outcome, link.</p>
+            <p><a href="#" rel="noopener noreferrer">Read more</a></p>
+          </article>
+
+          <article class="project-card" role="listitem" aria-label="Project 3">
+            <h3>Project Three</h3>
+            <p>Short description of project — tech used, outcome, link.</p>
+            <p><a href="#" rel="noopener noreferrer">Read more</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">Contact</h2>
+        <p>If you'd like to reach me, use the form below or email me at <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+
+        <!-- Note: form action intentionally left blank. Hook to your backend or use a service. -->
+        <form class="contact-form" method="post" action="#" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="cta-button">Send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> M1racleScr1pt — All rights reserved.</p>
+      <p><small>Built with security, accessibility, and progressive enhancement in mind.</small></p>
+    </div>
+  </footer>
+
+  <!-- Minimal progressive enhancement script -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Set copyright year
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Mobile nav toggle
+      var navToggle = document.getElementById('navToggle');
+      var primaryNav = document.getElementById('primary-nav');
+      if (navToggle && primaryNav) {
+        navToggle.addEventListener('click', function () {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          primaryNav.classList.toggle('open');
+        });
+      }
+
+      // Smooth scroll for in-page links (respect reduced motion)
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced) {
+        document.addEventListener('click', function (e) {
+          var tgt = e.target;
+          if (tgt.tagName === 'A' && tgt.getAttribute('href') && tgt.getAttribute('href').startsWith('#')) {
+            var id = tgt.getAttribute('href').slice(1);
+            var el = document.getElementById(id);
+            if (el) {
+              e.preventDefault();
+              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      }
+
+      // Simple client-side form validation feedback
+      var form = document.querySelector('.contact-form');
+      if (form) {
+        form.addEventListener('submit', function (ev) {
+          if (!form.checkValidity()) {
+            ev.preventDefault();
+            form.querySelectorAll(':invalid')[0].focus();
+          } else {
+            // Placeholder: replace with proper handling (AJAX post, third-party service, or server endpoint).
+            // For security, handle CSRF/token server-side if you implement POST.
+            ev.preventDefault();
+            alert('Thanks — form handling not configured. I can wire this to a backend if you like.');
+          }
+        });
+      }
+    }());
+  </script>
+</body>
+</html>
