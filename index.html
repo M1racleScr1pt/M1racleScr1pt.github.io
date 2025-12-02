@@ -405,5 +405,21 @@
         }
     })();
     </script>
+
+    <script>
+    // Initialize Vivus for pencil animation
+    if (typeof Vivus !== 'undefined') {
+        new Vivus('pencil-draw', {
+            type: 'oneByOne',
+            duration: 200,
+            animTimingFunction: Vivus.EASE
+        });
+    }
+
+    // Initialize AOS
+    if (typeof AOS !== 'undefined') {
+        AOS.init();
+    }
+    </script>
 </body>
 </html>

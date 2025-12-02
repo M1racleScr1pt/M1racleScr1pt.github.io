@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-    <title>Podcast Room - M1racleScr1pt</title>
+    <title>Building Secure APIs with Rust - M1racleScr1pt</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
@@ -51,93 +51,49 @@
         <section class="hero">
             <div class="container hero-layout">
                 <div class="hero-content" data-aos="fade-up" data-aos-delay="50">
-                    <span class="eyebrow">Podcast Room</span>
-                    <h2>Intimate Conversations</h2>
-                    <p>Deep dives into study habits, cybersecurity insights, mindset shifts, and operational excellence through candid discussions.</p>
+                    <span class="eyebrow">Development</span>
+                    <h2>Building Secure APIs with Rust</h2>
+                    <p>Exploring memory safety and performance in web services — why Rust is perfect for backend security.</p>
                     <div class="hero-cta">
-                        <a class="btn btn-primary" href="#episodes">Latest episodes</a>
-                        <a class="btn btn-secondary" href="#topics">Explore topics</a>
+                        <a class="btn btn-primary" href="#content">Read the article</a>
+                        <a class="btn btn-secondary" href="Blog.html">Back to blog</a>
                     </div>
                 </div>
                 <div class="hero-image" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="anime.jpg" alt="Podcast microphone setup" loading="lazy">
+                    <img src="anime.jpg" alt="Rust programming illustration" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <section id="episodes" class="section">
+        <article id="content" class="section">
             <div class="container" data-aos="fade-up">
-                <div class="section-heading center">
-                    <span class="eyebrow">Recent episodes</span>
-                    <h2>Listen to the latest</h2>
-                    <p>Catch up on my most recent podcast conversations and solo reflections.</p>
+                <div class="post-meta">
+                    <span class="post-date">Nov 28, 2025</span>
+                    <span class="post-category">Development</span>
                 </div>
-                <div class="posts-grid" data-aos="fade-up" data-aos-delay="120">
-                    <article class="post-card">
-                        <div class="post-meta">
-                            <span class="post-date">Dec 1, 2025</span>
-                            <span class="post-category">Mindset</span>
-                        </div>
-                        <h3>Overcoming Imposter Syndrome in Tech</h3>
-                        <p>Discussing self-doubt, building confidence, and the importance of community support.</p>
-                        <a class="inline-link" href="https://spotify.com/episode/example1" target="_blank">Listen now -></a>
-                    </article>
-                    <article class="post-card">
-                        <div class="post-meta">
-                            <span class="post-date">Nov 28, 2025</span>
-                            <span class="post-category">Learning</span>
-                        </div>
-                        <h3>Effective Study Techniques for Cybersecurity Students</h3>
-                        <p>Practical strategies for mastering complex technical concepts and staying motivated.</p>
-                        <a class="inline-link" href="https://spotify.com/episode/example2" target="_blank">Listen now -></a>
-                    </article>
-                    <article class="post-card">
-                        <div class="post-meta">
-                            <span class="post-date">Nov 25, 2025</span>
-                            <span class="post-category">Career</span>
-                        </div>
-                        <h3>From Student to SOC Analyst: My Journey</h3>
-                        <p>Personal reflections on transitioning from academia to real-world cybersecurity work.</p>
-                        <a class="inline-link" href="https://spotify.com/episode/example3" target="_blank">Listen now -></a>
-                    </article>
-                </div>
-                <div class="section-cta" data-aos="fade-up" data-aos-delay="200">
-                    <a class="btn btn-secondary" href="https://spotify.com/show/m1raclescr1pt" target="_blank">Subscribe on Spotify</a>
-                </div>
-            </div>
-        </section>
+                <div class="prose">
+                    <h3>Why Rust for APIs?</h3>
+                    <p>Rust's ownership system and borrow checker prevent entire classes of vulnerabilities that plague C/C++ applications. Memory safety without garbage collection overhead makes it ideal for high-performance web services.</p>
 
-        <section id="topics" class="section section-alt">
-            <div class="container" data-aos="fade-up">
-                <div class="section-heading center">
-                    <span class="eyebrow">Episode themes</span>
-                    <h2>Explore by topic</h2>
-                    <p>Find episodes organized around key themes and interests.</p>
-                </div>
-                <div class="topics-grid" data-aos="fade-up" data-aos-delay="120">
-                    <article class="topic-card">
-                        <h3>Study Habits & Productivity</h3>
-                        <p>Tips for effective learning, time management, and maintaining focus in technical fields.</p>
-                        <a class="inline-link" href="#study">Listen to episodes -></a>
-                    </article>
-                    <article class="topic-card">
-                        <h3>Cybersecurity Insights</h3>
-                        <p>Deep dives into current threats, defense strategies, and industry trends.</p>
-                        <a class="inline-link" href="#security">Listen to episodes -></a>
-                    </article>
-                    <article class="topic-card">
-                        <h3>Mindset & Motivation</h3>
-                        <p>Conversations about mental health, work-life balance, and personal growth.</p>
-                        <a class="inline-link" href="#mindset">Listen to episodes -></a>
-                    </article>
-                    <article class="topic-card">
-                        <h3>Guest Interviews</h3>
-                        <p>Chats with fellow students, professionals, and industry experts.</p>
-                        <a class="inline-link" href="#guests">Listen to episodes -></a>
-                    </article>
+                    <h3>Key Security Benefits</h3>
+                    <ul>
+                        <li>No null pointer dereferences</li>
+                        <li>No buffer overflows</li>
+                        <li>No data races in concurrent code</li>
+                        <li>Strong type system prevents common mistakes</li>
+                    </ul>
+
+                    <h3>Popular Frameworks</h3>
+                    <p>Actix-web and Rocket provide high-performance HTTP servers with async support. Tokio ecosystem enables scalable concurrent applications.</p>
+
+                    <h3>Getting Started</h3>
+                    <p>Install Rust, create a new project with `cargo new`, and add dependencies. The compiler guides you to correct, safe code.</p>
+
+                    <h3>Real-World Adoption</h3>
+                    <p>Companies like Dropbox, Cloudflare, and Discord use Rust in production for its reliability and performance characteristics.</p>
                 </div>
             </div>
-        </section>
+        </article>
     </main>
 
     <footer class="global-footer">
@@ -170,7 +126,7 @@
                     <ul>
                         <li><a href="mailto:miracleomokaro55@gmail.com">Help</a></li>
                         <li><a href="Contact.html">Community</a></li>
-                        <li><a href="#episodes">Status</a></li>
+                        <li><a href="#content">Status</a></li>
                         <li><a href="Contact.html">Contact Us</a></li>
                     </ul>
                 </div>
