@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#ffffff">
     <title>M1racleScr1pt</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
 </head>
 <body>
     <header class="header" id="top">
@@ -46,7 +46,7 @@
     </div>
 
     <main>
-        <section class="hero" data-aos="fade-up">
+        <section class="hero">
             <div class="container hero-layout">
                 <div class="hero-content">
                     <span class="eyebrow">Cybersecurity · Creativity</span>
@@ -56,6 +56,9 @@
                         <a class="btn btn-primary" href="#latest-posts">Latest highlights</a>
                         <a class="btn btn-secondary" href="#contact">Let's connect</a>
                     </div>
+                    <svg id="pencil-draw" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <path id="draw-path" d="M50 100 Q100 50 150 100 T250 100 Q300 150 350 100" stroke="#8B4513" stroke-width="2" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+                    </svg>
                 </div>
                 <div class="hero-image">
                     <img src="anime.jpg" alt="Miracle Omokaro anime-inspired portrait" loading="lazy">
@@ -63,7 +66,7 @@
             </div>
         </section>
 
-        <section id="latest-posts" class="section" data-aos="fade-up">
+        <section id="latest-posts" class="section">
             <div class="container">
                 <div class="section-heading center">
                     <span class="eyebrow">Latest posts</span>
@@ -341,9 +344,8 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
     <script>
-    AOS.init();
     (function() {
         const storageKey = 'm1racle-theme';
         const toggle = document.querySelector('.theme-toggle');
