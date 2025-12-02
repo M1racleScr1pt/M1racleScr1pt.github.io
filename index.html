@@ -59,7 +59,7 @@
                         <a class="btn btn-secondary" href="#contact">Let's connect</a>
                     </div>
                     <svg id="pencil-draw" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                        <path id="draw-path" d="M50 100 Q100 50 150 100 T250 100 Q300 150 350 100" stroke="#8B4513" stroke-width="2" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+                        <path id="draw-path" d="M50 100 Q100 50 150 100 T250 100 Q300 150 350 100" stroke="#8B4513" stroke-width="2" fill="none"/>
                     </svg>
                 </div>
                 <div class="hero-image" data-aos="zoom-in" data-aos-delay="200">
@@ -237,7 +237,7 @@
             <hr class="section-divider">
 
             <section class="section">
-                                <a class="inline-link" href="blog-secure-apis-rust.html">Read more -></a>
+                <div class="container">
                     <div class="section-heading center">
                         <span class="eyebrow">Engineering</span>
                         <h2>Deep Technical Skills</h2>
@@ -246,12 +246,12 @@
                     <div class="posts-grid">
                         <article class="post-card">
                             <div class="post-meta">
-                                <a class="inline-link" href="blog-public-speaking.html">Read more -></a>
+                                <span class="post-date">Nov 28, 2025</span>
                                 <span class="post-category">Code</span>
                             </div>
                             <h3>Rust for Secure APIs</h3>
                             <p>Building memory-safe web services.</p>
-                            <a class="inline-link" href="Research.html">Read more -></a>
+                            <a class="inline-link" href="blog-secure-apis-rust.html">Read more -></a>
                         </article>
                     </div>
                 </div>
@@ -403,21 +403,7 @@
                 }
             });
         }
-
-        // Initialize Vivus for pencil animation
-        if (typeof Vivus !== 'undefined') {
-            new Vivus('pencil-draw', {
-                type: 'delayed',
-                duration: 100,
-                start: 'autostart',
-                pathTimingFunction: Vivus.EASE
-            });
-        }
-
-        // Initialize AOS
-        if (typeof AOS !== 'undefined') {
-            AOS.init();
-        }
+    })();
     </script>
 </body>
 </html>
