@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#ffffff">
     <title>M1racleScr1pt</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -45,7 +46,7 @@
     </div>
 
     <main>
-        <section class="hero">
+        <section class="hero" data-aos="fade-up">
             <div class="container hero-layout">
                 <div class="hero-content">
                     <span class="eyebrow">Cybersecurity · Creativity</span>
@@ -62,7 +63,7 @@
             </div>
         </section>
 
-        <section id="latest-posts" class="section">
+        <section id="latest-posts" class="section" data-aos="fade-up">
             <div class="container">
                 <div class="section-heading center">
                     <span class="eyebrow">Latest posts</span>
@@ -203,9 +204,77 @@
                         <a class="inline-link" href="Podcast.html">Listen to breakdowns -></a>
                     </article>
                 </div>
-                <blockquote class="pull-quote">"No amount of guilt can change the past, no anxiety can alter the future." — Marcus Aurelius</blockquote>
             </div>
         </section>
+
+        <div class="content-box">
+            <section class="section section-alt">
+                <div class="container">
+                    <div class="section-heading center">
+                        <span class="eyebrow">Watch on YouTube</span>
+                        <h2>Latest Videos</h2>
+                        <p>Visual explainers and tutorials on cybersecurity and programming.</p>
+                    </div>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <div class="post-meta">
+                                <span class="post-date">Dec 1, 2025</span>
+                                <span class="post-category">Tutorial</span>
+                            </div>
+                            <h3>Intro to Threat Modeling</h3>
+                            <p>A visual guide to securing your applications.</p>
+                            <a class="inline-link" href="Videos.html">Watch now -></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-heading center">
+                        <span class="eyebrow">Engineering</span>
+                        <h2>Deep Technical Skills</h2>
+                        <p>Exploring the fortress of programming and cybersecurity engineering.</p>
+                    </div>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <div class="post-meta">
+                                <span class="post-date">Nov 28, 2025</span>
+                                <span class="post-category">Code</span>
+                            </div>
+                            <h3>Rust for Secure APIs</h3>
+                            <p>Building memory-safe web services.</p>
+                            <a class="inline-link" href="Research.html">Read more -></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section section-alt">
+                <div class="container">
+                    <div class="section-heading center">
+                        <span class="eyebrow">Stories</span>
+                        <h2>From the Field</h2>
+                        <p>Personal reflections and community stories.</p>
+                    </div>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <div class="post-meta">
+                                <span class="post-date">Nov 25, 2025</span>
+                                <span class="post-category">Personal</span>
+                            </div>
+                            <h3>Public Speaking Journey</h3>
+                            <p>Overcoming fears in tech presentations.</p>
+                            <a class="inline-link" href="Podcast.html">Listen -></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
 
 
     </main>
@@ -218,40 +287,63 @@
             </div>
             <div class="footer-links">
                 <div class="footer-column">
-                    <h3>Navigate</h3>
+                    <h3>Product</h3>
                     <ul>
-                        <li><a href="#top">Back to top</a></li>
-                        <li><a href="#latest-posts">Highlights</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Deep Dives</h3>
-                    <ul>
                         <li><a href="Research.html">Research</a></li>
-                        <li><a href="Books.html">Books</a></li>
-                        <li><a href="Podcast.html">Podcast</a></li>
                         <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Books.html">Books</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Follow</h3>
+                    <h3>Platform</h3>
                     <ul>
-                        <li><a href="https://github.com/m1raclescr1pt" target="_blank" rel="noopener">GitHub</a></li>
-                        <li><a href="https://twitter.com/m1raclescr1pt" target="_blank" rel="noopener">X (Twitter)</a></li>
-                        <li><a href="mailto:miracleomokaro55@gmail.com">Email</a></li>
-                        <li><a href="Contact.html">Speaking</a></li>
+                        <li><a href="Podcast.html">Podcast</a></li>
+                        <li><a href="About Me.html">About</a></li>
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="mailto:miracleomokaro55@gmail.com">Help</a></li>
+                        <li><a href="Contact.html">Community</a></li>
+                        <li><a href="#latest-posts">Status</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="About Me.html">About</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="Research.html">Careers</a></li>
+                        <li><a href="Contact.html">Press</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container footer-bottom">
+            <div class="footer-social">
+                <a href="https://github.com/m1raclescr1pt" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" role="img"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.11.79-.25.79-.56v-2.02c-3.34.73-4.04-1.6-4.04-1.6-.53-1.34-1.29-1.7-1.29-1.7-1.05-.73.08-.72.08-.72 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.76.4-1.26.73-1.55-2.66-.31-5.47-1.34-5.47-5.95 0-1.32.47-2.4 1.24-3.24-.12-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.39 11.39 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.24 0 4.62-2.82 5.63-5.5 5.93.42.36.8 1.07.8 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+                </a>
+                <a href="https://twitter.com/m1raclescr1pt" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                    <svg viewBox="0 0 24 24" role="img"><path d="M18.244 2.25h3.384l-7.39 8.427 8.68 11.073h-6.798l-4.237-5.632-4.843 5.632H3.654l7.835-9.112L3.12 2.25h6.953l3.825 5.111 4.346-5.111Z"/></svg>
+                </a>
+                <a href="mailto:miracleomokaro55@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" role="img"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v.217l9 5.4 9-5.4V7H3Zm18 10V9.383l-8.553 5.13a1 1 0 0 1-1.026 0L3 9.383V17h18Z"/></svg>
+                </a>
+            </div>
             <p>&copy; 2025 M1racleScr1pt. Crafted with curiosity in Ozoro, Delta State.</p>
             <a class="inline-link" href="Contact.html">Collaborate -></a>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+    AOS.init();
     (function() {
         const storageKey = 'm1racle-theme';
         const toggle = document.querySelector('.theme-toggle');

@@ -370,11 +370,11 @@ main {
 /* Sections */
 .section {
     padding: 100px 0;
-    background: var(--bg-primary);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(248, 250, 252, 0.5) 100%);
 }
 
 .section-alt {
-    background: var(--bg-muted);
+    background: linear-gradient(135deg, var(--bg-muted) 0%, rgba(255, 255, 255, 0.3) 100%);
 }
 
 .section-heading {
@@ -488,17 +488,20 @@ main {
     box-shadow: var(--shadow-soft);
 }
 
-.pull-quote {
-    margin: 64px auto 0;
-    max-width: 720px;
-    padding: 32px;
-    border-left: 4px solid var(--accent);
-    background: var(--surface-card);
+.content-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid var(--border-subtle);
     border-radius: var(--card-radius);
-    box-shadow: var(--shadow-flat);
-    font-size: 22px;
-    font-style: italic;
-    color: var(--text-primary);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background: var(--border-subtle);
+    margin: 0;
 }
 
 /* Social rail */
@@ -710,6 +713,28 @@ main {
     gap: 16px;
     align-items: center;
     justify-content: space-between;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    color: var(--footer-text);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+    opacity: 1;
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 .footer-bottom a {
