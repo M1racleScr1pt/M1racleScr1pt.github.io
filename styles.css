@@ -328,18 +328,6 @@ body.nav-open {
     stroke-linejoin: round;
 }
 
-/* Pencil draw animation: reveal the stroke on load */
-#draw-path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: pencil-draw 2s ease-out forwards;
-    animation-delay: 0.45s;
-}
-
-@keyframes pencil-draw {
-    to { stroke-dashoffset: 0; }
-}
-
 .hero-content p {
     font-size: 20px;
     color: var(--text-secondary);
@@ -833,6 +821,33 @@ body.nav-open {
 
     .hero-image {
         max-width: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .logo-wrap h1 {
+        font-size: 20px;
+    }
+
+    .logo-wrap p {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .section {
+        padding: 80px 0;
     }
 }
 

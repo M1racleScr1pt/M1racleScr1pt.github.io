@@ -403,7 +403,21 @@
                 }
             });
         }
-    })();
+
+        // Initialize Vivus for pencil animation
+        if (typeof Vivus !== 'undefined') {
+            new Vivus('pencil-draw', {
+                type: 'delayed',
+                duration: 100,
+                start: 'autostart',
+                pathTimingFunction: Vivus.EASE
+            });
+        }
+
+        // Initialize AOS
+        if (typeof AOS !== 'undefined') {
+            AOS.init();
+        }
     </script>
 </body>
 </html>
