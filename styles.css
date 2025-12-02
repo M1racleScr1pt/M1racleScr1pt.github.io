@@ -116,10 +116,12 @@ main {
 }
 
 .header-inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    gap: 32px;
-    padding: 20px 0;
+    gap: 24px;
+    padding: 18px 0;
+    transition: padding 0.3s ease;
 }
 
 .logo-wrap {
@@ -145,9 +147,17 @@ main {
 
 .nav {
     display: flex;
-    gap: 28px;
-    margin-left: auto;
+    gap: clamp(18px, 2.4vw, 32px);
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
 }
 
 .nav a {
@@ -206,6 +216,15 @@ main {
     flex-direction: column;
     gap: 24px;
     align-items: center;
+    width: min(90%, 360px);
+}
+
+body.nav-open {
+    overflow: hidden;
+}
+
+.header.header-condensed .header-inner {
+    padding: 12px 0;
 }
 
 .theme-toggle {
@@ -305,13 +324,20 @@ main {
 }
 
 #pencil-draw path {
-    animation: draw 3s ease-in-out forwards;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-@keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
+/* Pencil draw animation: reveal the stroke on load */
+#draw-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: pencil-draw 2s ease-out forwards;
+    animation-delay: 0.45s;
+}
+
+@keyframes pencil-draw {
+    to { stroke-dashoffset: 0; }
 }
 
 .hero-content p {
@@ -758,6 +784,12 @@ main {
 }
 
 /* Responsive */
+@media (max-width: 1100px) {
+    .nav {
+        justify-content: flex-start;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-content h2 {
         font-size: 42px;
@@ -765,10 +797,6 @@ main {
 }
 
 @media (max-width: 900px) {
-    .header-inner {
-        flex-wrap: wrap;
-    }
-
     .nav {
         display: none;
     }
@@ -777,8 +805,17 @@ main {
         display: grid;
     }
 
-    .theme-toggle {
-        margin-left: auto;
+    .header-inner {
+        grid-template-columns: 1fr auto;
+        gap: 18px;
+    }
+
+    .logo-wrap {
+        align-items: center;
+    }
+
+    .header-actions {
+        justify-self: end;
     }
 
     .hero-layout {
@@ -823,5 +860,16 @@ main {
     .footer-bottom {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
     }
 }
